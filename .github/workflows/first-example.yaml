@@ -13,8 +13,11 @@ jobs:
                    echo "My first Github Actions Job"
                    ls -ltra
                    cat README.md
-            - name: Generate ASCII artwork
-              run: cowsay -f dragon "run for cover" >> dragon.txt
+           - name: Ship it
+             uses: mscoutermarsh/cowsays-action@master
+             with:
+                text: 'ship ship ship!'
+                color: 'red'
 
            # - name: List files
            #   run: ls
