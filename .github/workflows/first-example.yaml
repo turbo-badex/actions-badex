@@ -13,9 +13,10 @@ jobs:
                    echo "My first Github Actions Job"
                    ls -ltra
                    cat README.md
-           - name: Ship it
-             uses: mscoutermarsh/cowsays-action@master
-             with:
+
+            - name: Ship it
+              uses: mscoutermarsh/cowsays-action@master
+              with:
                 text: 'ship ship ship!'
                 color: 'red'
 
