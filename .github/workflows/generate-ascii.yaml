@@ -4,6 +4,8 @@ on: push
 #test
 jobs: 
     First_job:
+        env:
+            ANIMAL: dragon
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repo
@@ -13,7 +15,7 @@ jobs:
               run: sudo apt-get install cowsay -y
 
             - name: execute cowsay CMD
-              run: cowsay -f dragon "run for cover, I am a DRAGON...RAWR" >> dragon.txt
+              run: cowsay -f $ANIMAL "run for cover, I am a DRAGON...RAWR" >> dragon.txt
 
             - name: upload artifact
               uses: actions/upload-artifact@v4
