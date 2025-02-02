@@ -1,6 +1,7 @@
 name: generate asccii artwork
 
-on: push
+on: 
+    workflow_dispatch:
 #test
 jobs: 
     First_job:
