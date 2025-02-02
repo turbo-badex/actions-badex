@@ -4,8 +4,7 @@ on: push
 #test
 jobs: 
     First_job:
-        env:
-            ANIMAL: dragon
+     
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repo
